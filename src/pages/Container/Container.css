@@ -1,0 +1,72 @@
+.containerComponent {
+  height: 90vh;
+  background-color: #35424A;
+}
+
+.cardComponent {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 80%;
+  height: 80%;
+  margin: 0 auto;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  width: 15vw;
+  height: 50vh;
+  background-color: #282C34;
+  border-radius: 5px;
+  box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
+}
+
+.card .title {
+  font-size: 24px;
+  color: #9DADCC;
+  background-color: #272B33;
+  padding: 4px;
+}
+
+.containerCard {
+  list-style: none;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  align-self: center;
+  width: 100%;
+  padding: 0;
+}
+
+.containerCard li{
+  color: #9DADCC;
+  width: 75%;
+  margin-top: 1%;
+}
+
+.containerCard li:nth-child(2n) {
+  background-color: #313640;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}
+.containerCard li:nth-child(odd) {
+  margin-top: 4%;
+
+}
+
+ul .liCasesGreen{
+  color: green;
+}
+ul .liCasesRed{
+  color: #a52626;
+}
+ul .liCasesOrange{
+  color: #a87515;
+}
+
+.lastStatistic {
+  font-size: 14px;
+  color: #282C34;
+}
