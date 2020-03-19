@@ -52,7 +52,7 @@ export default function Container() {
   })
 
 
-  /* Brazil Cases*/
+  /* World Cases*/
   const [totalCasesWorld, setTotalCasesWorld] = useState(0);
   const [totalDeathsWorld, setTotalDeathsWorld] = useState(0);
   const [totalRecoveredWorld, setTotalRecoveredWorld] = useState(0);
@@ -74,7 +74,6 @@ export default function Container() {
   const [casesPor1M, setCasesPor1M] = useState(0);
   /* */
   
-
   return (
     <div className="containerComponent">
       <div className="cardComponent">
@@ -96,17 +95,18 @@ export default function Container() {
           <ul className="containerCard">
               <li>Total de Casos:</li> <li>{totalCasesWorld}</li>
               <li className="liCasesGreen">Total de Recuperados:</li> <li className="liCasesGreen">{totalRecoveredWorld}</li>
-              <li className="liCasesRed">Total de Mortes:</li> <li className="liCasesRed">{totalDeathsWorld}</li>
               <li className="liCasesOrange">Novos Casos:</li> <li className="liCasesOrange">{newCasesWorld}</li>
+              <li className="liCasesRed">Total de Mortes:</li> <li className="liCasesRed">{totalDeathsWorld}</li>
               <li className="liCasesRed">Mortes Hoje:</li> <li className="liCasesRed">{newDeathsWorld}</li>
             </ul>
           <div className="containerCard">
             <span></span>
           </div>
-        </div>
-            
+        </div> 
       </div>
-        <span className="lastStatistic">{`${statisticTakenAt}.${moment().locale('pt-br')}`}</span>
+        <div className="lastStatisticContainer">
+          <span className="lastStatistic">{`${statisticTakenAt}.${moment().locale('pt-br')}`}</span>
+        </div>
     </div>
   );
 }

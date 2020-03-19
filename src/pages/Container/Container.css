@@ -1,31 +1,31 @@
 .containerComponent {
-  height: 90vh;
-  background-color: #35424A;
+  height: 100%;
+  background-color: #35424a;
+  width: 100%;
 }
 
 .cardComponent {
   display: flex;
   justify-content: space-around;
   align-items: center;
-  width: 80%;
-  height: 80%;
   margin: 0 auto;
+  flex-direction: column;
 }
 
 .card {
   display: flex;
   flex-direction: column;
-  width: 15vw;
-  height: 50vh;
-  background-color: #282C34;
+  width: 90%;
+  margin-top: 5%;
+  background-color: #282c34;
   border-radius: 5px;
   box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
 }
 
 .card .title {
   font-size: 24px;
-  color: #9DADCC;
-  background-color: #272B33;
+  color: #9dadcc;
+  background-color: #272b33;
   padding: 4px;
 }
 
@@ -38,11 +38,11 @@
   align-items: center;
   align-self: center;
   width: 100%;
-  padding: 0;
+  padding: 8px 0 16px 0;
 }
 
-.containerCard li{
-  color: #9DADCC;
+.containerCard li {
+  color: #9dadcc;
   width: 75%;
   margin-top: 1%;
 }
@@ -53,20 +53,49 @@
 }
 .containerCard li:nth-child(odd) {
   margin-top: 4%;
-
 }
 
-ul .liCasesGreen{
+ul .liCasesGreen {
   color: green;
 }
-ul .liCasesRed{
+ul .liCasesRed {
   color: #a52626;
 }
-ul .liCasesOrange{
+ul .liCasesOrange {
   color: #a87515;
+}
+
+.lastStatisticContainer {
+  padding: 5%;
+
 }
 
 .lastStatistic {
   font-size: 14px;
-  color: #282C34;
+  color: #282c34;
+}
+
+@media (min-width: 1024px) {
+  .containerComponent {
+    height: 90vh;
+    background-color: #35424a;
+    width: 100%;
+  }
+  .cardComponent {
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-start;
+    margin: 0 auto;
+    flex-direction: row;
+  }
+  .card {
+    display: flex;
+    flex-direction: column;
+    margin-top: 5%;
+    background-color: #282c34;
+    border-radius: 5px;
+    box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
+    width: 30vw;
+    min-height: 550px;
+  }
 }
