@@ -1,3 +1,7 @@
+html {
+  background-color: #35424a;
+}
+
 .containerComponent {
   height: 100%;
   background-color: #35424a;
@@ -67,7 +71,6 @@ ul .liCasesOrange {
 
 .lastStatisticContainer {
   padding: 5%;
-
 }
 
 .lastStatistic {
@@ -80,6 +83,7 @@ ul .liCasesOrange {
     height: 90vh;
     background-color: #35424a;
     width: 100%;
+    overflow: hidden;
   }
   .cardComponent {
     display: flex;
