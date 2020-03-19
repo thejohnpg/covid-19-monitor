@@ -33,7 +33,6 @@ export default function Container() {
   })
   .then(response => {
     const data = response.data.countries_stat;
-    console.log(data);
     const dataBrazil = data.map((item) => {
       if (item.country_name.indexOf("Brazil"))
         return true
@@ -45,7 +44,6 @@ export default function Container() {
         setSeriousCritical(item.serious_critical)
         setActiveCases(item.active_cases)
         setCasesPor1M(item.total_cases_per_1m_population)
-        console.log('dataBrazil', item)
       })
     })
   })
@@ -58,7 +56,6 @@ export default function Container() {
   const [newDeathsWorld, setNewDeathsWorld] = useState(0);
   const [statisticTakenAt, setStatisticTakenAt] = useState(new Date());
 
-  console.log('date ------->',statisticTakenAt)
   /* */
 
   /* Brazil Cases*/
