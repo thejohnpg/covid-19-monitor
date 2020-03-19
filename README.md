@@ -1,5 +1,4 @@
-# Covid-19 Monitor Br
-
+# Covid-19 Monitor Br 
 This is a simple project using ReactJs to monitor Corona Virus cases in Brazil and in the World.
 
 Libraries:
@@ -36,3 +35,7 @@ License
 ----
 
 MIT
+
+- I love Open Source ❤
+
+##### Demo 👉👉 https://covid19-monitorbr.netlify.com/ 👈👈
