@@ -12,6 +12,10 @@ function App() {
 
       <Container />
 
+    <footer className="footer"> 
+      by: John Peterson - <a href="https://github.com/thejohnpg"> Github</a> - <a href="https://www.linkedin.com/in/thejohnpg/"> Linkedin</a>
+    </footer>
+
     </div>
   );
 }
