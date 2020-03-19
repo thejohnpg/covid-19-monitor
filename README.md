@@ -39,5 +39,7 @@ License
 MIT
 
 - I love Open Source ❤
+----------
+>##### Demo 👉👉 https://covid19-monitorbr.netlify.com/ 👈👈
 
-##### Demo 👉👉 https://covid19-monitorbr.netlify.com/ 👈👈
+###### Creator API (in Rapid API) - Thanks Guy 👉 [astsiatsko](https://rapidapi.com/user/astsiatsko)👈
