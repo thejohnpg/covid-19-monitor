@@ -12,7 +12,7 @@ export default function Container() {
       "method": "GET",
       "headers": {
         "x-rapidapi-host": "coronavirus-monitor.p.rapidapi.com",
-        "x-rapidapi-key": "1a592265e8msh058ba7cc33b0b19p1aabe7jsn84f25486d277",
+        "x-rapidapi-key": process.env.REACT_APP_RAPID_API_KEY,
       }
     })
     .then(response => {
@@ -28,7 +28,7 @@ export default function Container() {
     "method": "GET",
     "headers": {
       "x-rapidapi-host": "coronavirus-monitor.p.rapidapi.com",
-      "x-rapidapi-key": "1a592265e8msh058ba7cc33b0b19p1aabe7jsn84f25486d277",
+      "x-rapidapi-key": process.env.REACT_APP_RAPID_API_KEY,
     }
   })
   .then(response => {
