@@ -29,7 +29,6 @@ export default function Container() {
     "headers": {
       "x-rapidapi-host": "coronavirus-monitor.p.rapidapi.com",
       "x-rapidapi-key": "1a592265e8msh058ba7cc33b0b19p1aabe7jsn84f25486d277",
-
     }
   })
   .then(response => {
@@ -50,7 +49,6 @@ export default function Container() {
       })
     })
   })
-
 
   /* World Cases*/
   const [totalCasesWorld, setTotalCasesWorld] = useState(0);
