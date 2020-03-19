@@ -80,7 +80,7 @@ ul .liCasesOrange {
 
 @media (min-width: 1024px) {
   .containerComponent {
-    height: 90vh;
+    height: 84vh;
     background-color: #35424a;
     width: 100%;
     overflow: hidden;
