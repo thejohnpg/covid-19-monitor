@@ -3,7 +3,6 @@ html {
 }
 
 .containerComponent {
-  height: 100%;
   background-color: #35424a;
   width: 100%;
 }
@@ -14,6 +13,7 @@ html {
   align-items: center;
   margin: 0 auto;
   flex-direction: column;
+  flex-wrap: wrap;
 }
 
 .card {
@@ -78,9 +78,21 @@ ul .liCasesOrange {
   color: #282c34;
 }
 
+.subtitle {
+  font-size: 12px;
+}
+
+.card.wide {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  height: auto;
+  padding: 8px;
+  box-sizing: border-box;
+}
+
 @media (min-width: 1024px) {
   .containerComponent {
-    height: 84vh;
     background-color: #35424a;
     width: 100%;
     overflow: hidden;
@@ -101,5 +113,31 @@ ul .liCasesOrange {
     box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
     width: 30vw;
     min-height: 550px;
+  }
+}
+
+
+
+@media (min-width: 375px) {
+  .card.wide {
+    width: 90%;
+  }
+}
+
+@media (max-width: 375px) {
+  .card.wide {
+    width: 90%;
+  }
+}
+
+@media (max-width: 320px) {
+  .card.wide {
+    width: 100%;
+  }
+}
+
+@media (min-width: 1024px) {
+  .card.wide {
+    width: 80%;
   }
 }
