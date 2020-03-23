@@ -196,7 +196,7 @@ export default function Container() {
           <span className="title">Brasil</span>
           <ul className="containerCard">
             <li>Casos:</li> <li>{cases}</li>
-            <li className="">Novos Casos:</li> <li className="">{newCases}</li>
+            <li className="">Novos Casos (Hoje):</li> <li className="">{newCases}</li>
             <li className="liCasesGreen">Recuperados:</li>
             <li className="liCasesGreen">{totalRecovered}</li>
             <li className="liCasesOrange">Casos Críticos:</li>
@@ -205,7 +205,7 @@ export default function Container() {
             <li className="liCasesOrange">{activeCases}</li>
             <li className="liCasesOrange">Casos por Milhão:</li>
             <li className="liCasesOrange">
-              {casesPor1M}a cada 1M de habitantes
+              {casesPor1M} a cada 1M de habitantes
             </li>
             <li className="liCasesRed">Mortes:</li>
             <li className="liCasesRed">{deaths}</li>
@@ -219,7 +219,7 @@ export default function Container() {
             <li>Total de Casos:</li> <li>{totalCasesWorld}</li>
             <li className="liCasesGreen">Total de Recuperados:</li>
             <li className="liCasesGreen">{totalRecoveredWorld}</li>
-            <li className="liCasesOrange">Novos Casos:</li>
+            <li className="liCasesOrange">Novos Casos (Hoje):</li>
             <li className="liCasesOrange">{newCasesWorld}</li>
             <li className="liCasesRed">Total de Mortes:</li>
             <li className="liCasesRed">{totalDeathsWorld}</li>
@@ -235,7 +235,7 @@ export default function Container() {
           <ul class="containerCard">
             <li className="title">China</li> <li></li>
             <li>Casos:</li> <li>{chinaCases}</li>
-            <li className="">Novos Casos:</li>
+            <li className="">Novos Casos (Hoje):</li>
             <li className="">{chinaNewCases}</li>
             <li className="liCasesGreen">Recuperados:</li>
             <li className="liCasesGreen">{chinaTotalRecovered}</li>
@@ -245,7 +245,7 @@ export default function Container() {
             <li className="liCasesOrange">{chinaActiveCases}</li>
             <li className="liCasesOrange">Casos por Milhão:</li>
             <li className="liCasesOrange">
-              {chinaCasesPor1M}a cada 1M de habitantes
+              {chinaCasesPor1M} a cada 1M de habitantes
             </li>
             <li className="liCasesRed">Mortes:</li>
             <li className="liCasesRed">{chinaDeaths}</li>
@@ -255,7 +255,7 @@ export default function Container() {
           <ul class="containerCard">
             <li className="title">Itália</li> <li></li>
             <li>Casos:</li> <li>{italyCases}</li>
-            <li className="">Novos Casos:</li>
+            <li className="">Novos Casos (Hoje):</li>
             <li className="">{italyNewCases}</li>
             <li className="liCasesGreen">Recuperados:</li>
             <li className="liCasesGreen">{italyTotalRecovered}</li>
@@ -265,7 +265,7 @@ export default function Container() {
             <li className="liCasesOrange">{italyActiveCases}</li>
             <li className="liCasesOrange">Casos por Milhão:</li>
             <li className="liCasesOrange">
-              {italyCasesPor1M}a cada 1M de habitantes
+              {italyCasesPor1M} a cada 1M de habitantes
             </li>
             <li className="liCasesRed">Mortes:</li>
             <li className="liCasesRed">{italyDeaths}</li>
@@ -275,7 +275,7 @@ export default function Container() {
           <ul class="containerCard">
             <li className="title">Estados Unidos</li> <li></li>
             <li>Casos:</li> <li>{usaCases}</li>
-            <li className="">Novos Casos:</li>
+            <li className="">Novos Casos (Hoje):</li>
             <li className="">{usaNewCases}</li>
             <li className="liCasesGreen">Recuperados:</li>
             <li className="liCasesGreen">{usaTotalRecovered}</li>
@@ -285,7 +285,7 @@ export default function Container() {
             <li className="liCasesOrange">{usaActiveCases}</li>
             <li className="liCasesOrange">Casos por Milhão:</li>
             <li className="liCasesOrange">
-              {usaCasesPor1M}a cada 1M de habitantes
+              {usaCasesPor1M} a cada 1M de habitantes
             </li>
             <li className="liCasesRed">Mortes:</li>
             <li className="liCasesRed">{usaDeaths}</li>
