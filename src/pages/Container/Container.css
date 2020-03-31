@@ -5,6 +5,7 @@ html {
 .containerComponent {
   background-color: #35424a;
   width: 100%;
+  overflow: hidden;
 }
 
 .cardComponent {
@@ -23,7 +24,8 @@ html {
   margin-top: 5%;
   background-color: #282c34;
   border-radius: 5px;
-  box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
+  box-shadow: 4px 8px 16px 0px rgba(0, 0, 0, 0.4);
+  border-radius: 12px;
 }
 
 .card .title {
@@ -31,6 +33,7 @@ html {
   color: #9dadcc;
   background-color: #272b33;
   padding: 4px;
+  border-radius: 12px 12px 0 0;
 }
 
 .containerCard {
@@ -83,61 +86,43 @@ ul .liCasesOrange {
 }
 
 .card.wide {
-  width: 100%;
-  display: flex;
-  flex-direction: row;
+  width: 80vw;
   height: auto;
   padding: 8px;
   box-sizing: border-box;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
 }
 
 @media (min-width: 1024px) {
-  .containerComponent {
-    background-color: #35424a;
-    width: 100%;
-    overflow: hidden;
-  }
   .cardComponent {
-    display: flex;
     justify-content: space-around;
     align-items: flex-start;
     margin: 0 auto;
     flex-direction: row;
   }
   .card {
-    display: flex;
     flex-direction: column;
     margin-top: 5%;
-    background-color: #282c34;
-    border-radius: 5px;
-    box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
     width: 30vw;
-    min-height: 550px;
+    min-height: 600px;
   }
 }
 
-
-
-@media (min-width: 375px) {
+@media (max-width: 1023px) {
   .card.wide {
-    width: 90%;
+    width: 90vw;
   }
 }
 
-@media (max-width: 375px) {
+@media (max-width: 768px) {
   .card.wide {
-    width: 90%;
+    grid-template-columns: 1fr;
   }
 }
 
-@media (max-width: 320px) {
-  .card.wide {
-    width: 100%;
-  }
-}
-
-@media (min-width: 1024px) {
-  .card.wide {
-    width: 80%;
-  }
+.adsbygoogle{
+  width: 500px;
+  height: 250px;
+  background-color: #282c34;
 }

@@ -4,14 +4,15 @@
 }
 
 .header {
-  background-color: #282C34;
-  min-height: 10vh;
   display: flex;
   align-self: center;
-  font-size: calc(10px + 2vmin);
+  height: 10vh;
+  font-size: calc(1em);
+  background-color: #282C34;
   color: #9DADCC;
   padding: 0 0 0 16px;
   align-items: center;
+  width: 100%;
 }
 
 .footer{

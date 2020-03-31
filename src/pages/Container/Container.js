@@ -1,138 +1,13 @@
 import React, { useState, useEffect } from "react";
 
+import AdSense from "react-adsense";
+
 import "./Container.css";
 
 import axios from "axios";
 import moment from "moment";
 
 export default function Container() {
-  useEffect(() => {
-
-    /* World Cases */
-    axios
-      .get(
-        "https://coronavirus-monitor.p.rapidapi.com/coronavirus/world_total_stat.php",
-        {
-          method: "GET",
-          headers: {
-            "x-rapidapi-host": "coronavirus-monitor.p.rapidapi.com",
-            "x-rapidapi-key": process.env.REACT_APP_RAPID_API_KEY
-          }
-        }
-      )
-      .then(response => {
-        const data = response.data;
-        setTotalCasesWorld(data.total_cases || 0);
-        setTotalDeathsWorld(data.total_deaths || 0);
-        setTotalRecoveredWorld(data.total_recovered || 0);
-        setNewCasesWorld(data.new_cases || 0);
-        setNewDeathsWorld(data.new_deaths || 0);
-        setStatisticTakenAt(data.statistic_taken_at || 0);
-      }, []);
-    /*  */
-
-    /* Brazil Cases */
-    axios
-      .get(
-        "https://coronavirus-monitor.p.rapidapi.com/coronavirus/latest_stat_by_country_name.php?country=Brazil",
-        {
-          method: "GET",
-          headers: {
-            "x-rapidapi-host": "coronavirus-monitor.p.rapidapi.com",
-            "x-rapidapi-key": process.env.REACT_APP_RAPID_API_KEY
-          }
-        }
-      )
-      .then(response => {
-        const data = response.data.latest_stat_by_country[0];
-        setCases(data.total_cases || 0);
-        setDeaths(data.total_deaths || 0);
-        setTotaRecovered(data.total_recovered || 0);
-        setNewDeaths(data.new_deaths || 0 );
-        setNewCases(data.new_cases || 0);
-        setSeriousCritical(data.serious_critical || 0);
-        setActiveCases(data.active_cases || 0);
-        setCasesPor1M(data.total_cases_per1m || 0);
-      }, []);
-    /*  */
-
-    /* China Cases */
-    axios
-      .get(
-        "https://coronavirus-monitor.p.rapidapi.com/coronavirus/latest_stat_by_country_name.php?country=China",
-        {
-          method: "GET",
-          headers: {
-            "x-rapidapi-host": "coronavirus-monitor.p.rapidapi.com",
-            "x-rapidapi-key": process.env.REACT_APP_RAPID_API_KEY
-          }
-        }
-      )
-      .then(response => {
-        const dataChina = response.data.latest_stat_by_country[0];
-        setChinaCases(dataChina.total_cases || 0);
-        setChinaDeaths(dataChina.total_deaths || 0);
-        setChinaTotaRecovered(dataChina.total_recovered || 0);
-        setChinaNewDeaths(dataChina.new_deaths || 0);
-        setChinaNewCases(dataChina.new_cases || 0);
-        setChinaSeriousCritical(dataChina.serious_critical || 0);
-        setChinaActiveCases(dataChina.active_cases || 0);
-        setChinaCasesPor1M(dataChina.total_cases_per1m || 0);
-      }, []);
-    /* */
-
-     /* Italy Cases */
-     axios
-     .get(
-       "https://coronavirus-monitor.p.rapidapi.com/coronavirus/latest_stat_by_country_name.php?country=Italy",
-       {
-         method: "GET",
-         headers: {
-           "x-rapidapi-host": "coronavirus-monitor.p.rapidapi.com",
-           "x-rapidapi-key": process.env.REACT_APP_RAPID_API_KEY
-         }
-       }
-     )
-     .then(response => {
-       const dataItaly = response.data.latest_stat_by_country[0];
-       setItalyCases(dataItaly.total_cases || 0);
-       setItalyDeaths(dataItaly.total_deaths || 0);
-       setItalyTotaRecovered(dataItaly.total_recovered || 0);
-       setItalyNewDeaths(dataItaly.new_deaths || 0 );
-       setItalyNewCases(dataItaly.new_cases || 0);
-       setItalySeriousCritical(dataItaly.serious_critical || 0);
-       setItalyActiveCases(dataItaly.active_cases || 0);
-       setItalyCasesPor1M(dataItaly.total_cases_per1m || 0);
-     }, []);
-   /* */
-
-    /* USA Cases */
-    axios
-    .get(
-      "https://coronavirus-monitor.p.rapidapi.com/coronavirus/latest_stat_by_country_name.php?country=USA",
-      {
-        method: "GET",
-        headers: {
-          "x-rapidapi-host": "coronavirus-monitor.p.rapidapi.com",
-          "x-rapidapi-key": process.env.REACT_APP_RAPID_API_KEY
-        }
-      }
-    )
-    .then(response => {
-      const dataItaly = response.data.latest_stat_by_country[0];
-      console.log(dataItaly);
-      setUsaCases(dataItaly.total_cases || 0);
-      setUsaDeaths(dataItaly.total_deaths || 0);
-      setUsaTotaRecovered(dataItaly.total_recovered || 0);
-      setUsaNewDeaths(dataItaly.new_deaths || 0);
-      setUsaNewCases(dataItaly.new_cases || 0);
-      setUsaSeriousCritical(dataItaly.serious_critical || 0);
-      setUsaActiveCases(dataItaly.active_cases || 0);
-      setUsaCasesPor1M(dataItaly.total_cases_per1m || 0);
-    }, []);
-  /* */
-  }, []);
-
   /* World Cases*/
   const [totalCasesWorld, setTotalCasesWorld] = useState(0);
   const [totalDeathsWorld, setTotalDeathsWorld] = useState(0);
@@ -140,7 +15,6 @@ export default function Container() {
   const [newCasesWorld, setNewCasesWorld] = useState(0);
   const [newDeathsWorld, setNewDeathsWorld] = useState(0);
   const [statisticTakenAt, setStatisticTakenAt] = useState(new Date());
-
   /* */
 
   /* Brazil Cases*/
@@ -187,6 +61,131 @@ export default function Container() {
   const [usaCasesPor1M, setUsaCasesPor1M] = useState(0);
   /* */
 
+  useEffect(() => {
+    /* World Cases */
+    axios
+      .get(
+        "https://coronavirus-monitor.p.rapidapi.com/coronavirus/world_total_stat.php",
+        {
+          method: "GET",
+          headers: {
+            "x-rapidapi-host": "coronavirus-monitor.p.rapidapi.com",
+            "x-rapidapi-key": process.env.REACT_APP_RAPID_API_KEY
+          }
+        }
+      )
+      .then(response => {
+        const data = response.data;
+        setTotalCasesWorld(data.total_cases || 0);
+        setTotalDeathsWorld(data.total_deaths || 0);
+        setTotalRecoveredWorld(data.total_recovered || 0);
+        setNewCasesWorld(data.new_cases || 0);
+        setNewDeathsWorld(data.new_deaths || 0);
+        setStatisticTakenAt(data.statistic_taken_at || 0);
+      }, []);
+    /*  */
+
+    /* Brazil Cases */
+    axios
+      .get(
+        "https://coronavirus-monitor.p.rapidapi.com/coronavirus/latest_stat_by_country_name.php?country=Brazil",
+        {
+          method: "GET",
+          headers: {
+            "x-rapidapi-host": "coronavirus-monitor.p.rapidapi.com",
+            "x-rapidapi-key": process.env.REACT_APP_RAPID_API_KEY
+          }
+        }
+      )
+      .then(response => {
+        const data = response.data.latest_stat_by_country[0];
+        setCases(data.total_cases || 0);
+        setDeaths(data.total_deaths || 0);
+        setTotaRecovered(data.total_recovered || 0);
+        setNewDeaths(data.new_deaths || 0);
+        setNewCases(data.new_cases || 0);
+        setSeriousCritical(data.serious_critical || 0);
+        setActiveCases(data.active_cases || 0);
+        setCasesPor1M(data.total_cases_per1m || 0);
+      }, []);
+    /*  */
+
+    /* China Cases */
+    axios
+      .get(
+        "https://coronavirus-monitor.p.rapidapi.com/coronavirus/latest_stat_by_country_name.php?country=China",
+        {
+          method: "GET",
+          headers: {
+            "x-rapidapi-host": "coronavirus-monitor.p.rapidapi.com",
+            "x-rapidapi-key": process.env.REACT_APP_RAPID_API_KEY
+          }
+        }
+      )
+      .then(response => {
+        const dataChina = response.data.latest_stat_by_country[0];
+        setChinaCases(dataChina.total_cases || 0);
+        setChinaDeaths(dataChina.total_deaths || 0);
+        setChinaTotaRecovered(dataChina.total_recovered || 0);
+        setChinaNewDeaths(dataChina.new_deaths || 0);
+        setChinaNewCases(dataChina.new_cases || 0);
+        setChinaSeriousCritical(dataChina.serious_critical || 0);
+        setChinaActiveCases(dataChina.active_cases || 0);
+        setChinaCasesPor1M(dataChina.total_cases_per1m || 0);
+      }, []);
+    /* */
+
+    /* Italy Cases */
+    axios
+      .get(
+        "https://coronavirus-monitor.p.rapidapi.com/coronavirus/latest_stat_by_country_name.php?country=Italy",
+        {
+          method: "GET",
+          headers: {
+            "x-rapidapi-host": "coronavirus-monitor.p.rapidapi.com",
+            "x-rapidapi-key": process.env.REACT_APP_RAPID_API_KEY
+          }
+        }
+      )
+      .then(response => {
+        const dataItaly = response.data.latest_stat_by_country[0];
+        setItalyCases(dataItaly.total_cases || 0);
+        setItalyDeaths(dataItaly.total_deaths || 0);
+        setItalyTotaRecovered(dataItaly.total_recovered || 0);
+        setItalyNewDeaths(dataItaly.new_deaths || 0);
+        setItalyNewCases(dataItaly.new_cases || 0);
+        setItalySeriousCritical(dataItaly.serious_critical || 0);
+        setItalyActiveCases(dataItaly.active_cases || 0);
+        setItalyCasesPor1M(dataItaly.total_cases_per1m || 0);
+      }, []);
+    /* */
+
+    /* USA Cases */
+    axios
+      .get(
+        "https://coronavirus-monitor.p.rapidapi.com/coronavirus/latest_stat_by_country_name.php?country=USA",
+        {
+          method: "GET",
+          headers: {
+            "x-rapidapi-host": "coronavirus-monitor.p.rapidapi.com",
+            "x-rapidapi-key": process.env.REACT_APP_RAPID_API_KEY
+          }
+        }
+      )
+      .then(response => {
+        const dataItaly = response.data.latest_stat_by_country[0];
+        setUsaCases(dataItaly.total_cases || 0);
+        setUsaDeaths(dataItaly.total_deaths || 0);
+        setUsaTotaRecovered(dataItaly.total_recovered || 0);
+        setUsaNewDeaths(dataItaly.new_deaths || 0);
+        setUsaNewCases(dataItaly.new_cases || 0);
+        setUsaSeriousCritical(dataItaly.serious_critical || 0);
+        setUsaActiveCases(dataItaly.active_cases || 0);
+        setUsaCasesPor1M(dataItaly.total_cases_per1m || 0);
+      }, []);
+    /* */
+  }, []);
+
   return (
     <div className="containerComponent">
       <div className="cardComponent">
@@ -194,7 +193,8 @@ export default function Container() {
           <span className="title">Brasil</span>
           <ul className="containerCard">
             <li>Casos:</li> <li>{cases}</li>
-            <li className="">Novos Casos (Hoje):</li> <li className="">{newCases}</li>
+            <li className="">Novos Casos (Hoje):</li>
+            <li className="">{newCases}</li>
             <li className="liCasesGreen">Recuperados:</li>
             <li className="liCasesGreen">{totalRecovered}</li>
             <li className="liCasesOrange">Casos Críticos:</li>
@@ -293,7 +293,7 @@ export default function Container() {
         </div>
       </div>
       <div className="lastStatisticContainer">
-        <span className="lastStatistic">{`${statisticTakenAt}.${moment().locale("pt-br")}`}</span>
+        <span className="lastStatistic">{`Última atualização do servidor: ${statisticTakenAt} UTC`}</span>
       </div>
     </div>
   );
