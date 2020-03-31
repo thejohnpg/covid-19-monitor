@@ -121,8 +121,6 @@ ul .liCasesOrange {
   }
 }
 
-.adsbygoogle{
-  width: 500px;
-  height: 250px;
-  background-color: #282c34;
+.adsbygoogle {
+  display: block;
 }
