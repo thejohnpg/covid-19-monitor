@@ -228,6 +228,7 @@ export default function Container() {
           </div>
         </div>
 
+        <div className="adsenseGoogle">
         <AdSense.Google
           className="adsbygoogle"
           client='ca-pub-4687270086536035'
@@ -237,6 +238,9 @@ export default function Container() {
           responsive='true'
           layoutKey='-fb+5w+4e-db+86'
         />
+        </div>
+
+
 
         <div className="card wide">
           <ul class="containerCard">

@@ -121,9 +121,22 @@ ul .liCasesOrange {
   }
 }
 
-.adsbygoogle {
-  display: block;
-  width: 500px;
-  height: 200px;
-  z-index: 99999;
+.adsenseGoogle{
+  display: grid;
+  grid-template-columns: 1fr;
+  width: 80vw;
+  max-height: 30vh;
+  margin-top: 5%;
+  padding: 8px;
+  box-sizing: border-box;
+  display: grid;
+  overflow: hidden;
+  box-shadow: none;
+  background-color: #35424a;
+}
+
+.adsbygoogle.adsbygoogle {
+  max-width: 100%;
+  max-height: 100%;
+  margin: 0 auto;
 }
