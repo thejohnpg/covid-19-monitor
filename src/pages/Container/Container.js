@@ -229,14 +229,13 @@ export default function Container() {
         </div>
 
         <AdSense.Google
-        className="adsbygoogle"
+          className="adsbygoogle"
           client='ca-pub-4687270086536035'
           slot='7237351569'
           format='fluid'
+          style={{ width: 500, height: 300, float: 'left' }}
           responsive='true'
           layoutKey='-fb+5w+4e-db+86'
-          data-ad-format="fluid"
-          data-ad-layout-key="-fb+5w+4e-db+86"
         />
 
         <div className="card wide">

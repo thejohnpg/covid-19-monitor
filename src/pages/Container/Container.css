@@ -123,4 +123,7 @@ ul .liCasesOrange {
 
 .adsbygoogle {
   display: block;
+  width: 500px;
+  height: 200px;
+  z-index: 99999;
 }
