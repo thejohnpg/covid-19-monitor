@@ -64,7 +64,7 @@ export default function Container() {
     /* World Cases */
     axios
       .get(
-        "https://coronavirus-monitor.p.rapidapi.com/coronavirus/world_total_stat.php",
+        "https://coronavirus-monitor.p.rapidapi.com/coronavirus/worldstat.php",
         {
           method: "GET",
           headers: {
@@ -87,7 +87,7 @@ export default function Container() {
     /* Brazil Cases */
     axios
       .get(
-        "https://coronavirus-monitor.p.rapidapi.com/coronavirus/latest_stat_by_country_name.php?country=Brazil",
+        "https://coronavirus-monitor.p.rapidapi.com/coronavirus/latest_stat_by_country.php?country=Brazil",
         {
           method: "GET",
           headers: {
@@ -112,7 +112,7 @@ export default function Container() {
     /* China Cases */
     axios
       .get(
-        "https://coronavirus-monitor.p.rapidapi.com/coronavirus/latest_stat_by_country_name.php?country=China",
+        "https://coronavirus-monitor.p.rapidapi.com/coronavirus/latest_stat_by_country.php?country=China",
         {
           method: "GET",
           headers: {
@@ -137,7 +137,7 @@ export default function Container() {
     /* Italy Cases */
     axios
       .get(
-        "https://coronavirus-monitor.p.rapidapi.com/coronavirus/latest_stat_by_country_name.php?country=Italy",
+        "https://coronavirus-monitor.p.rapidapi.com/coronavirus/latest_stat_by_country.php?country=Italy",
         {
           method: "GET",
           headers: {
@@ -162,7 +162,7 @@ export default function Container() {
     /* USA Cases */
     axios
       .get(
-        "https://coronavirus-monitor.p.rapidapi.com/coronavirus/latest_stat_by_country_name.php?country=USA",
+        "https://coronavirus-monitor.p.rapidapi.com/coronavirus/latest_stat_by_country.php?country=USA",
         {
           method: "GET",
           headers: {
