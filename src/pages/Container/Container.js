@@ -229,18 +229,7 @@ export default function Container() {
         </div>
 
         <div className="adsenseGoogle">
-
-        <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
-        <ins class="adsbygoogle"
-            data-ad-layout="in-article"
-            data-ad-format="fluid"
-            data-ad-client="ca-pub-4687270086536035"
-            data-ad-slot="4384791665">
-          </ins>
-      <script>
-          (adsbygoogle = window.adsbygoogle || []).push({});
-      </script>
-        {/* <AdSense.Google
+        <AdSense.Google
           className="adsbygoogle"
           client='ca-pub-4687270086536035'
           slot='7237351569'
@@ -248,10 +237,8 @@ export default function Container() {
           style={{ width: 500, height: 300, float: 'left' }}
           responsive='true'
           layoutKey='-fb+5w+4e-db+86'
-        /> */}
+        />
         </div>
-
-
 
         <div className="card wide">
           <ul class="containerCard">
