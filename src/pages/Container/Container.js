@@ -237,10 +237,10 @@ export default function Container() {
             data-ad-client="ca-pub-4687270086536035"
             data-ad-slot="4384791665">
           </ins>
-      {/* <script>
+      <script>
           (adsbygoogle = window.adsbygoogle || []).push({});
       </script>
-        <AdSense.Google
+        {/* <AdSense.Google
           className="adsbygoogle"
           client='ca-pub-4687270086536035'
           slot='7237351569'
