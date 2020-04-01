@@ -308,6 +308,17 @@ export default function Container() {
       <div className="lastStatisticContainer">
         <span className="lastStatistic">{`Última atualização do servidor: ${statisticTakenAt} UTC`}</span>
       </div>
+      <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+      <ins class="adsbygoogle"
+          data-ad-layout="in-article"
+          data-ad-format="fluid"
+          data-ad-client="ca-pub-4687270086536035"
+          data-ad-slot="4384791665">
+        </ins>
+      <script>
+          (adsbygoogle = window.adsbygoogle || []).push({});
+      </script>
     </div>
+    
   );
 }
