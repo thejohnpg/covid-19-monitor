@@ -1,17 +1,25 @@
+
 [![Netlify Status](https://api.netlify.com/api/v1/badges/d867f258-a554-4565-92e8-285cd009dd96/deploy-status)](https://app.netlify.com/sites/covid19-monitorbr/deploys)
 
-# Covid-19 Monitor Br 
+# Covid-19 Monitor Br
+> **Demo  https://covid19-monitorbr.netlify.com/**
+
 This is a simple project using ReactJs to monitor Corona Virus cases in Brazil and in the World.
 
 Libraries:
-- React Hook's (useState e UseEffect)
-- Axios
-- Moment
+*- React Hook's (useState e UseEffect)*
+*- Axios*
+*- Moment*
 
+![](https://i.imgur.com/H1dgwQg.png)
+  
+![](https://i.imgur.com/t43x9iL.png)
+
+![](https://i.imgur.com/kAwSLED.png)
 # New Features!
-
-- Ranking of the most affected countries
-- Real-time Map Monitoring
+  
+- [X] Brazil Map (All States from Brazil) 
+- [X] Ranking of the most affected countries
 
 ### API Keys
 
@@ -24,22 +32,27 @@ Create an .env file at the root of the directory and place your api key there or
 Download Project 👉 [Covid-19 BR](https://github.com/thejohnpg/covid-19-monitor)
 
 ```sh
+
 $ cd covid-19-monitor
+
 $ yarn or npm install
+
 $ yarn start or npm start
+
 ```
 
 ### Development
-
 Want to contribute? Great! Let's Go !
 
-License
-----
-
-MIT
 
 - I love Open Source ❤
-----------
->##### Demo 👉👉 https://covid19-monitorbr.netlify.com/ 👈👈
 
-###### Creator API (in Rapid API) - Thanks Guy 👉 [astsiatsko](https://rapidapi.com/user/astsiatsko)👈
+  
+*Creator API (in Rapid API) - [astsiatsko](https://rapidapi.com/user/astsiatsko)
+Creator [API Covid-19 States of Brazil ](https://covid19-brazil-api-docs.now.sh/)
+@devarthurribeiro](https://github.com/devarthurribeiro)*
+
+-----------
+
+*License*
+*MIT* ❤

@@ -1,10 +1,11 @@
 import React, { useState, useEffect } from "react";
 
-import AdSense from "react-adsense";
-
-import "./Container.css";
-
 import axios from "axios";
+
+import style from './style.module.css';
+
+import { GiBrazil, GiWorld } from "react-icons/gi"; 
+import { GoServer } from "react-icons/go";
 
 export default function Container() {
   /* World Cases*/
@@ -186,128 +187,202 @@ export default function Container() {
   }, []);
 
   return (
-    <div className="containerComponent">
-      <div className="cardComponent">
-        <div className="card">
-          <span className="title">Brasil</span>
-          <ul className="containerCard">
-            <li>Casos:</li> <li>{cases}</li>
-            <li className="">Novos Casos (Hoje):</li>
-            <li className="">{newCases}</li>
-            <li className="liCasesGreen">Recuperados:</li>
-            <li className="liCasesGreen">{totalRecovered}</li>
-            <li className="liCasesOrange">Casos Críticos:</li>
-            <li className="liCasesOrange">{seriousCritical}</li>
-            <li className="liCasesOrange">Casos Ativos:</li>
-            <li className="liCasesOrange">{activeCases}</li>
-            <li className="liCasesOrange">Casos por Milhão:</li>
-            <li className="liCasesOrange">
-              {casesPor1M} a cada 1M de habitantes
-            </li>
-            <li className="liCasesRed">Mortes:</li>
-            <li className="liCasesRed">{deaths}</li>
-            <li className="liCasesRed">Mortes Hoje:</li>
-            <li className="liCasesRed">{newDeaths}</li>
-          </ul>
-        </div>
-        <div className="card">
-          <span className="title">Mundo</span>
-          <ul className="containerCard">
-            <li>Total de Casos:</li> <li>{totalCasesWorld}</li>
-            <li className="liCasesGreen">Total de Recuperados:</li>
-            <li className="liCasesGreen">{totalRecoveredWorld}</li>
-            <li className="liCasesOrange">Novos Casos (Hoje):</li>
-            <li className="liCasesOrange">{newCasesWorld}</li>
-            <li className="liCasesRed">Total de Mortes:</li>
-            <li className="liCasesRed">{totalDeathsWorld}</li>
-            <li className="liCasesRed">Mortes Hoje:</li>
-            <li className="liCasesRed">{newDeathsWorld}</li>
-          </ul>
-          <div className="containerCard">
-            <span></span>
-          </div>
-        </div>
-
-        <div className="adsenseGoogle">
-        <AdSense.Google
-          className="adsbygoogle"
-          client='ca-pub-4687270086536035'
-          slot='7237351569'
-          format='fluid'
-          style={{ width: 500, height: 300, float: 'left' }}
-          responsive='true'
-          layoutKey='-fb+5w+4e-db+86'
-        />
+    <React.Fragment>
+      {/* Brasil */}
+    <div className={style.container}>
+      <div className={style.wrapper}>
+          <span className={style.title}>Brasil
+              <GiBrazil size={18} className={style.icon} />
+            </span>
+            <ul className={style.card}>
+                <li className={style.item}>
+                    <span className={style.itemLabel}>Casos:</span>
+                    <span className={style.itemValue}>{cases}</span>
+                </li> 
+                <li className={style.item}>
+                    <span className={style.itemLabel}>Novos Casos (Hoje):</span>
+                    <span className={style.itemValue}>{newCases}</span>
+                </li>
+                <li className={style.item}>
+                    <span className={style.itemLabel}>Recuperados:</span>
+                    <span className={style.itemValue}>{totalRecovered}</span>
+                </li>
+                <li className={style.item}>
+                    <span className={style.itemLabel}>Casos Críticos:</span>
+                    <span className={style.itemValue}>{seriousCritical}</span>
+                </li>
+                <li className={style.item}>
+                    <span className={style.itemLabel}>Casos Ativos:</span>
+                    <span className={style.itemValue}>{activeCases}</span>
+                </li>
+                <li className={style.item}>
+                    <span className={style.itemLabel}>Proporção:</span>
+                    <span className={style.itemValue}>{casesPor1M}</span>
+                </li>
+                <li className={style.item}>
+                    <span className={style.itemLabel}>Mortes:</span>
+                    <span className={style.itemValue}>{deaths}</span>
+                </li>
+                <li className={style.item}>
+                    <span className={style.itemLabel}>Mortes Hoje:</span>
+                    <span className={style.itemValue}>{newDeaths}</span>
+                </li>
+            </ul>
         </div>
 
-        <div className="card wide">
-          <ul class="containerCard">
-            <li className="title">China</li> <li></li>
-            <li>Casos:</li> <li>{chinaCases}</li>
-            <li className="">Novos Casos (Hoje):</li>
-            <li className="">{chinaNewCases}</li>
-            <li className="liCasesGreen">Recuperados:</li>
-            <li className="liCasesGreen">{chinaTotalRecovered}</li>
-            <li className="liCasesOrange">Casos Críticos:</li>
-            <li className="liCasesOrange">{chinaSeriousCritical}</li>
-            <li className="liCasesOrange">Casos Ativos:</li>
-            <li className="liCasesOrange">{chinaActiveCases}</li>
-            <li className="liCasesOrange">Casos por Milhão:</li>
-            <li className="liCasesOrange">
-              {chinaCasesPor1M} a cada 1M de habitantes
+      {/* China */}
+      <div className={style.wrapper}>
+          <h4 className={style.title}> China</h4>
+        <ul className={style.card}>
+            <li className={style.item}>
+                <span className={style.itemLabel}>Casos:</span>
+                <span className={style.itemValue}>{chinaCases}</span>
+            </li> 
+            <li className={style.item}>
+                <span className={style.itemLabel}>Novos Casos (Hoje):</span>
+                <span className={style.itemValue}>{chinaNewCases}</span>
             </li>
-            <li className="liCasesRed">Mortes:</li>
-            <li className="liCasesRed">{chinaDeaths}</li>
-            <li className="liCasesRed">Mortes Hoje:</li>
-            <li className="liCasesRed">{chinaNewDeaths}</li>
-          </ul>
-          <ul class="containerCard">
-            <li className="title">Itália</li> <li></li>
-            <li>Casos:</li> <li>{italyCases}</li>
-            <li className="">Novos Casos (Hoje):</li>
-            <li className="">{italyNewCases}</li>
-            <li className="liCasesGreen">Recuperados:</li>
-            <li className="liCasesGreen">{italyTotalRecovered}</li>
-            <li className="liCasesOrange">Casos Críticos:</li>
-            <li className="liCasesOrange">{italySeriousCritical}</li>
-            <li className="liCasesOrange">Casos Ativos:</li>
-            <li className="liCasesOrange">{italyActiveCases}</li>
-            <li className="liCasesOrange">Casos por Milhão:</li>
-            <li className="liCasesOrange">
-              {italyCasesPor1M} a cada 1M de habitantes
+            <li className={style.item}>
+                <span className={style.itemLabel}>Recuperados:</span>
+                <span className={style.itemValue}>{chinaTotalRecovered}</span>
             </li>
-            <li className="liCasesRed">Mortes:</li>
-            <li className="liCasesRed">{italyDeaths}</li>
-            <li className="liCasesRed">Mortes Hoje:</li>
-            <li className="liCasesRed">{italyNewDeaths}</li>
-          </ul>
-          <ul class="containerCard">
-            <li className="title">Estados Unidos</li> <li></li>
-            <li>Casos:</li> <li>{usaCases}</li>
-            <li className="">Novos Casos (Hoje):</li>
-            <li className="">{usaNewCases}</li>
-            <li className="liCasesGreen">Recuperados:</li>
-            <li className="liCasesGreen">{usaTotalRecovered}</li>
-            <li className="liCasesOrange">Casos Críticos:</li>
-            <li className="liCasesOrange">{usaSeriousCritical}</li>
-            <li className="liCasesOrange">Casos Ativos:</li>
-            <li className="liCasesOrange">{usaActiveCases}</li>
-            <li className="liCasesOrange">Casos por Milhão:</li>
-            <li className="liCasesOrange">
-              {usaCasesPor1M} a cada 1M de habitantes
+            <li className={style.item}>
+                <span className={style.itemLabel}>Casos Críticos:</span>
+                <span className={style.itemValue}>{chinaSeriousCritical}</span>
             </li>
-            <li className="liCasesRed">Mortes:</li>
-            <li className="liCasesRed">{usaDeaths}</li>
-            <li className="liCasesRed">Mortes Hoje:</li>
-            <li className="liCasesRed">{usaNewDeaths}</li>
-          </ul>
-        </div>
+            <li className={style.item}>
+                <span className={style.itemLabel}>Casos Ativos:</span>
+                <span className={style.itemValue}>{chinaActiveCases}</span>
+            </li>
+            <li className={style.item}>
+                <span className={style.itemLabel}>Proporção:</span>
+                <span className={style.itemValue}>{chinaCasesPor1M}</span>
+            </li>
+            <li className={style.item}>
+                <span className={style.itemLabel}>Mortes:</span>
+                <span className={style.itemValue}>{chinaDeaths}</span>
+            </li>
+            <li className={style.item}>
+                <span className={style.itemLabel}>Mortes Hoje:</span>
+                <span className={style.itemValue}>{chinaNewDeaths}</span>
+            </li>
+        </ul>
       </div>
-      <div className="lastStatisticContainer">
-        <span className="lastStatistic">{`Última atualização do servidor: ${statisticTakenAt} UTC`}</span>
+    {/* Itália */}
+      <div className={style.wrapper}>
+        <h4 className={style.title}> Itália</h4>
+          <ul className={style.card}>
+              <li className={style.item}>
+                  <span className={style.itemLabel}>Casos:</span>
+                  <span className={style.itemValue}>{italyCases}</span>
+              </li> 
+              <li className={style.item}>
+                  <span className={style.itemLabel}>Novos Casos (Hoje):</span>
+                  <span className={style.itemValue}>{italyNewCases}</span>
+              </li>
+              <li className={style.item}>
+                  <span className={style.itemLabel}>Recuperados:</span>
+                  <span className={style.itemValue}>{italyTotalRecovered}</span>
+              </li>
+              <li className={style.item}>
+                  <span className={style.itemLabel}>Casos Críticos:</span>
+                  <span className={style.itemValue}>{italySeriousCritical}</span>
+              </li>
+              <li className={style.item}>
+                  <span className={style.itemLabel}>Casos Ativos:</span>
+                  <span className={style.itemValue}>{italyActiveCases}</span>
+              </li>
+              <li className={style.item}>
+                  <span className={style.itemLabel}>Proporção:</span>
+                  <span className={style.itemValue}>{italyCasesPor1M}</span>
+              </li>
+              <li className={style.item}>
+                  <span className={style.itemLabel}>Mortes:</span>
+                  <span className={style.itemValue}>{italyDeaths}</span>
+              </li>
+              <li className={style.item}>
+                  <span className={style.itemLabel}>Mortes Hoje:</span>
+                  <span className={style.itemValue}>{italyNewDeaths}</span>
+              </li>
+          </ul>
       </div>
-     
+
+      {/* USA */}
+      <div className={style.wrapper}>
+        <h4 className={style.title}> Estados Unidos</h4>
+          <ul className={style.card}>
+              <li className={style.item}>
+                  <span className={style.itemLabel}>Casos:</span>
+                  <span className={style.itemValue}>{usaCases}</span>
+              </li> 
+              <li className={style.item}>
+                  <span className={style.itemLabel}>Novos Casos (Hoje):</span>
+                  <span className={style.itemValue}>{usaNewCases}</span>
+              </li>
+              <li className={style.item}>
+                  <span className={style.itemLabel}>Recuperados:</span>
+                  <span className={style.itemValue}>{usaTotalRecovered}</span>
+              </li>
+              <li className={style.item}>
+                  <span className={style.itemLabel}>Casos Críticos:</span>
+                  <span className={style.itemValue}>{usaSeriousCritical}</span>
+              </li>
+              <li className={style.item}>
+                  <span className={style.itemLabel}>Casos Ativos:</span>
+                  <span className={style.itemValue}>{usaActiveCases}</span>
+              </li>
+              <li className={style.item}>
+                  <span className={style.itemLabel}>Proporção:</span>
+                  <span className={style.itemValue}>{usaCasesPor1M}</span>
+              </li>
+              <li className={style.item}>
+                  <span className={style.itemLabel}>Mortes:</span>
+                  <span className={style.itemValue}>{usaDeaths}</span>
+              </li>
+              <li className={style.item}>
+                  <span className={style.itemLabel}>Mortes Hoje:</span>
+                  <span className={style.itemValue}>{usaNewDeaths}</span>
+              </li>
+          </ul>
+      </div>
+
+      {/* World */}
+      <div className={style.wrapper}>
+          <span className={style.title}>Mundo
+            <GiWorld size={18} className={style.icon} />
+          </span>
+          <ul className={`${style.card} ${style.cardWorld}`}>
+              <li className={`${style.item} ${style.itemWorld}`}>
+                  <span className={style.itemLabel}>Casos:</span>
+                  <span className={style.itemValue}>{totalCasesWorld}</span>
+              </li> 
+              <li className={`${style.item} ${style.itemWorld}`}>
+                  <span className={style.itemLabel}>Novos Casos (Hoje):</span>
+                  <span className={style.itemValue}>{newCasesWorld}</span>
+              </li>
+              <li className={`${style.item} ${style.itemWorld}`}>
+                  <span className={style.itemLabel}>Mortes:</span>
+                  <span className={style.itemValue}>{totalDeathsWorld}</span>
+              </li>
+              <li className={`${style.item} ${style.itemWorld}`}>
+                  <span className={style.itemLabel}>Mortes Hoje:</span>
+                  <span className={style.itemValue}>{newDeathsWorld}</span>
+              </li>
+              <li className={`${style.item} ${style.itemWorld}`}>
+                  <span className={style.itemLabel}>Recuperados: </span>
+                  <span className={style.itemValue}>{totalRecoveredWorld}</span>
+              </li>
+          </ul>
+      </div>
+
+      {/* last Update Server API */}
+      <div className={style.lastupdateServer}>
+          <span className={style.lastupdateServerText}><GoServer size={16} color="#9dadcc" className={style.iconServer} /> Última atualização do Servidor: {`${statisticTakenAt} UTC`}</span>
+      </div>
     </div>
-    
+
+    </React.Fragment>
+
+
   );
 }

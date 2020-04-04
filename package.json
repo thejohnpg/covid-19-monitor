@@ -7,10 +7,14 @@
     "@testing-library/react": "^9.3.2",
     "@testing-library/user-event": "^7.1.2",
     "axios": "^0.19.2",
+    "classnames": "^2.2.6",
+    "fuse.js": "^5.1.0",
     "moment": "^2.24.0",
     "react": "^16.13.0",
     "react-adsense": "^0.1.0",
     "react-dom": "^16.13.0",
+    "react-icons": "^3.9.0",
+    "react-router-dom": "^5.1.2",
     "react-scripts": "3.4.0"
   },
   "scripts": {
