@@ -5,7 +5,8 @@ import Fuse from "fuse.js";
 
 import style from "./style.module.css";
 import EmptyImage from "./../../assets/empty-data.webp";
-import Loading from "./../../assets/three-dots.svg";
+// import Loading from "./../../assets/three-dots.svg";
+import Loading from "./../../assets/loading.svg";
 
 import { GoServer } from "react-icons/go";
 
@@ -85,7 +86,7 @@ export default function BrasilCases() {
               [style.loadingVisible]: isLoading
             })}
           >
-            <img src={Loading} alt="" />
+            <img src={Loading} alt="" className={style.rotating} />
           </div>
         )}
         {filteredDataCases.length ? (

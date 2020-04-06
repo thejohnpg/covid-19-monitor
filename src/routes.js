@@ -1,6 +1,6 @@
 import React from "react";
 
-import { BrowserRouter, Route, Switch } from "react-router-dom";
+import { Route, Switch } from "react-router-dom";
 
 import Container from './pages/Container/Container';
 import BrasilCases from './pages/BrasilCases/BrasilCases';
