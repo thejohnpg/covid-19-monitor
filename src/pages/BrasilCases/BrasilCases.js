@@ -5,7 +5,7 @@ import Fuse from "fuse.js";
 
 import style from "./style.module.css";
 import EmptyImage from "./../../assets/empty-data.webp";
-import Loading from "./../../assets/loading.gif";
+import Loading from "./../../assets/three-dots.svg";
 
 import { GoServer } from "react-icons/go";
 
