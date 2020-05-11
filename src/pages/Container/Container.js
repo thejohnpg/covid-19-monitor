@@ -1,11 +1,14 @@
 import React, { useState, useEffect } from "react";
 
 import axios from "axios";
+import moment from 'moment';
 
 import style from './style.module.css';
 
 import { GiBrazil, GiWorld } from "react-icons/gi"; 
 import { GoServer } from "react-icons/go";
+
+import ImageCoronaVirus from './../../assets/ImageCoronaVirus.webp'
 
 export default function Container() {
   /* World Cases*/
@@ -60,6 +63,7 @@ export default function Container() {
   const [usaActiveCases, setUsaActiveCases] = useState(0);
   const [usaCasesPor1M, setUsaCasesPor1M] = useState(0);
   /* */
+  
 
   useEffect(() => {
     /* World Cases */
@@ -186,6 +190,8 @@ export default function Container() {
     /* */
   }, []);
 
+  const hoursupdateserver = moment.utc(`${statisticTakenAt}+03:00`).format('HH:mm');
+
   return (
     <React.Fragment>
       {/* Brasil */}
@@ -201,7 +207,7 @@ export default function Container() {
                 </li> 
                 <li className={style.item}>
                     <span className={style.itemLabel}>Novos Casos (Hoje):</span>
-                    <span className={style.itemValue}>{newCases}</span>
+                    <span className={style.itemValue}>+ {newCases}</span>
                 </li>
                 <li className={style.item}>
                     <span className={style.itemLabel}>Recuperados:</span>
@@ -217,7 +223,7 @@ export default function Container() {
                 </li>
                 <li className={style.item}>
                     <span className={style.itemLabel}>Proporção:</span>
-                    <span className={style.itemValue}>{casesPor1M}</span>
+                    <span className={style.itemValue}>{casesPor1M} <span className={style.itemCasesPer1M}> a cada 1M de pessoas</span></span>
                 </li>
                 <li className={style.item}>
                     <span className={style.itemLabel}>Mortes:</span>
@@ -240,7 +246,7 @@ export default function Container() {
             </li> 
             <li className={style.item}>
                 <span className={style.itemLabel}>Novos Casos (Hoje):</span>
-                <span className={style.itemValue}>{chinaNewCases}</span>
+                <span className={style.itemValue}>+ {chinaNewCases}</span>
             </li>
             <li className={style.item}>
                 <span className={style.itemLabel}>Recuperados:</span>
@@ -256,7 +262,7 @@ export default function Container() {
             </li>
             <li className={style.item}>
                 <span className={style.itemLabel}>Proporção:</span>
-                <span className={style.itemValue}>{chinaCasesPor1M}</span>
+                <span className={style.itemValue}>{chinaCasesPor1M} <span className={style.itemCasesPer1M}> a cada 1M de pessoas</span></span>
             </li>
             <li className={style.item}>
                 <span className={style.itemLabel}>Mortes:</span>
@@ -278,7 +284,7 @@ export default function Container() {
               </li> 
               <li className={style.item}>
                   <span className={style.itemLabel}>Novos Casos (Hoje):</span>
-                  <span className={style.itemValue}>{italyNewCases}</span>
+                  <span className={style.itemValue}>+ {italyNewCases}</span>
               </li>
               <li className={style.item}>
                   <span className={style.itemLabel}>Recuperados:</span>
@@ -294,7 +300,7 @@ export default function Container() {
               </li>
               <li className={style.item}>
                   <span className={style.itemLabel}>Proporção:</span>
-                  <span className={style.itemValue}>{italyCasesPor1M}</span>
+                  <span className={style.itemValue}>{italyCasesPor1M} <span className={style.itemCasesPer1M}> a cada 1M de pessoas</span></span>
               </li>
               <li className={style.item}>
                   <span className={style.itemLabel}>Mortes:</span>
@@ -317,7 +323,7 @@ export default function Container() {
               </li> 
               <li className={style.item}>
                   <span className={style.itemLabel}>Novos Casos (Hoje):</span>
-                  <span className={style.itemValue}>{usaNewCases}</span>
+                  <span className={style.itemValue}>+ {usaNewCases}</span>
               </li>
               <li className={style.item}>
                   <span className={style.itemLabel}>Recuperados:</span>
@@ -333,7 +339,7 @@ export default function Container() {
               </li>
               <li className={style.item}>
                   <span className={style.itemLabel}>Proporção:</span>
-                  <span className={style.itemValue}>{usaCasesPor1M}</span>
+                  <span className={style.itemValue}>{usaCasesPor1M} <span className={style.itemCasesPer1M}> a cada 1M de pessoas</span></span>
               </li>
               <li className={style.item}>
                   <span className={style.itemLabel}>Mortes:</span>
@@ -358,7 +364,7 @@ export default function Container() {
               </li> 
               <li className={`${style.item} ${style.itemWorld}`}>
                   <span className={style.itemLabel}>Novos Casos (Hoje):</span>
-                  <span className={style.itemValue}>{newCasesWorld}</span>
+                  <span className={style.itemValue}>+ {newCasesWorld}</span>
               </li>
               <li className={`${style.item} ${style.itemWorld}`}>
                   <span className={style.itemLabel}>Mortes:</span>
@@ -375,14 +381,79 @@ export default function Container() {
           </ul>
       </div>
 
-      {/* last Update Server API */}
+            {/* last Update Server API */}
       <div className={style.lastupdateServer}>
-          <span className={style.lastupdateServerText}><GoServer size={16} color="#9dadcc" className={style.iconServer} /> Última atualização do Servidor: {`${statisticTakenAt} UTC`}</span>
+        <span className={style.lastupdateServerText}>
+          <GoServer size={16} color="#9dadcc" className={style.iconServer} /> Última atualização do Servidor: {`${moment(statisticTakenAt).format('DD/MM/YYYY')} às ${hoursupdateserver}`}</span>
       </div>
+
+      <div className={style.infoGoogle}>
+      <div className={style.containerTitleInfo}>
+          <span className={style.title}>Informações Gerais Sobre a Covid-19</span>
+        </div>
+        <div className={style.infoGoogleImage}>
+          <img src={ImageCoronaVirus} alt="Corona Vírus no Brasil" className={style.imgCoronaVirus}/>
+        </div>
+        <div className={style.containerTitle}>
+          <span className={style.title}>Visão Geral</span>
+        </div>
+        <span className={style.descriptionGoogleText}>
+        O coronavírus (COVID-19) é uma doença infecciosa causada por um novo vírus.
+        Ele causa problemas respiratórios semelhantes à gripe e sintomas como tosse, febre e, em casos mais graves, dificuldade para respirar. Como prevenção, lave as mãos com frequência e evite tocar o rosto e ter contato próximo (um metro de distância) com pessoas que não estejam bem.
+        </span>
+
+        <div className={style.containerTitle}>
+          <span className={style.title}>Transmissão</span>
+        </div>
+        <span className={style.descriptionGoogleText}>
+        A principal forma de contágio do novo coronavírus é o contato com uma pessoa infectada, que transmite o vírus por meio de tosse e espirros. Ele também se propaga quando a pessoa toca em uma superfície ou objeto contaminado e depois nos olhos, nariz ou boca.
+        </span>
+
+        <div className={style.containerTitle}>
+          <span className={style.title}>Sintomas do Novo Covid-19</span>
+        </div>
+        <span className={style.descriptionGoogleText}>
+          É possível estar com a COVID-19 por até 14 dias antes de apresentar os sintomas, que são febre, cansaço e tosse seca. A maioria das pessoas (cerca de 80%) se recupera da doença sem a necessidade de tratamentos especiais.
+          Em casos mais raros, ela pode ser grave e até fatal. Idosos e pessoas com outras condições médicas (como asma, diabetes e doença cardíaca) são mais vulneráveis a quadros sérios.
+          Possíveis sintomas:
+          <p>• Tosse</p>
+          <p>• Febre</p>
+          <p>• Cansaço</p>
+          <p>• Dificuldade para respirar (em casos graves)</p>
+        </span>
+
+        <div className={style.containerTitle}>
+          <span className={style.title}>Prevenção contra o Corona Vírus</span>
+        </div>
+        <span className={style.descriptionGoogleText}>
+          Atualmente, não há uma vacina para prevenir o coronavírus (COVID-19).
+          Para se proteger e evitar a propagação da doença:.
+          <p>• O que fazer:</p>
+          <p>• Lavar as mãos frequentemente por 20 segundos com água e sabão ou higienizá-las com álcool em gel</p>
+          <p>• Cobrir o nariz e a boca com um lenço ou o cotovelo ao tossir e espirrar</p>
+          <p>• Evitar contato próximo (um metro de distância) com pessoas que não estejam bem</p>
+          <p>• Ficar em casa e se isolar das outras pessoas que moram com você caso apresente os sintomas da doença</p>
+          O que não fazer:
+          <p>• Tocar os olhos, nariz ou boca sem estar com as mãos limpas</p>
+        </span>
+
+        <div className={style.containerTitle}>
+          <span className={style.title}>Tratamento para o Corona Vírus</span>
+        </div>
+        <span className={style.descriptionGoogleText}>
+          Não há nenhum medicamento específico para tratar ou prevenir o coronavírus (COVID-19). Algumas pessoas podem precisar da ajuda de aparelhos para respirar.
+          Se você apresentar sintomas leves, fique em casa até se recuperar. Para aliviar os sintomas:
+          <p>• descanse e durma;</p>
+          <p>• mantenha o corpo aquecido;</p>
+          <p>• beba bastante líquido;</p>
+          <p>• use um umidificador de ar ou tome um banho quente para aliviar a tosse e a dor de garganta.</p>
+        </span>
+      </div>
+
+
     </div>
 
     </React.Fragment>
-
 
   );
 }

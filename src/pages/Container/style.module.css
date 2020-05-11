@@ -7,7 +7,7 @@ html {
   flex-wrap: wrap;
   justify-content: space-around;
   padding: 8px 0 16px 0;
-  margin-bottom: 10vh;
+  margin-bottom: 5vh;
 }
 
 .wrapper {
@@ -86,6 +86,11 @@ html {
   font-weight: 400;
 }
 
+.itemCasesPer1M {
+  font-size: 0.5em;
+  vertical-align: middle;
+}
+
 .lastupdateServer {
   width: 100%;
 }
@@ -100,14 +105,46 @@ html {
 
 .lastupdateServer {
   padding: 8px;
-  margin-bottom: 10vh;
+  margin-bottom: 5vh;
+  margin-top: 5vh;
   display: flex;
   justify-content: center;
 }
 
 .lastupdateServerText {
-  font-size: 18px;
-  color: #282c34;
+  font-size: 0.6em;
+  color: #9dadcc;
   display: flex;
   align-items: center;
+}
+
+.infoGoogle {
+  width: 100%;
+  padding: 16px 32px;
+}
+
+.containerTitle {
+  margin-top: 5vh;
+  padding: 16px 0;
+}
+
+.descriptionGoogleText{
+  color: #9dadcc;
+  line-height: 25px;
+  letter-spacing: 2px;
+}
+
+.imgCoronaVirus {
+  max-width: 800px;
+  width: 100%;
+}
+
+.containerTitleInfo {
+  width: 100vw;
+  height: 8vh;
+  background: #9dadcc;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 8px 0;
 }
