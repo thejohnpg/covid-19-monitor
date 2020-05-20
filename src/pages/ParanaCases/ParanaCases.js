@@ -25,14 +25,14 @@ export default function ParanaCases() {
       });
   }, []);
 
-  console.log(prCases);
-
   return (
     <div className={style.container}>
-      <span className={style.titleContainer}> <span className={style.titleContainerText}> Paraná (Ranking) </span></span>
-        {prCases.map((item) => (
-            <div className={style.wrapper}>
-          <ul className={style.card} key={item.city_ibge_code}>
+      <span className={style.titleContainer}>
+        <span className={style.titleContainerText}> Paraná (Ranking) </span>
+      </span>
+      {prCases.map((item) => (
+        <div className={style.wrapper} key={item.city_ibge_code}>
+          <ul className={style.card}>
             <li className={`${style.item} ${style.itemWorld}`}>
               <span className={style.itemLabel}>Cidade</span>
               <span className={style.itemValue}>{item.city}</span>
@@ -52,17 +52,17 @@ export default function ParanaCases() {
               </span>
             </li>
             <li className={`${style.item} ${style.itemWorld}`}>
-              <span className={style.itemLabel}>
-                Proporção
-              </span>
+              <span className={style.itemLabel}>Proporção</span>
               <span className={style.itemValue}>
-                  {parseInt(`${item.confirmed_per_100k_inhabitants}`)} <span className={style.itemCasesPer1M}> a cada 100mil habitantes</span>
+                {parseInt(`${item.confirmed_per_100k_inhabitants}`)}
+                <span className={style.itemCasesPer1M}>
+                  a cada 100mil habitantes
+                </span>
               </span>
             </li>
           </ul>
-      </div>
-
-        ))}
+        </div>
+      ))}
     </div>
   );
 }

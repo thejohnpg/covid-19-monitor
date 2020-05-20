@@ -195,10 +195,9 @@ export default function Container() {
     .utc(`${statisticTakenAt}+03:00`)
     .format("HH:mm");
 
-
   return (
     <React.Fragment>
-      
+
       {/* Brasil */}
       <div className={style.container}>
         <div className={style.wrapper}>
@@ -363,9 +362,8 @@ export default function Container() {
             <li className={style.item}>
               <span className={style.itemLabel}>Proporção:</span>
               <span className={style.itemValue}>
-                {usaCasesPor1M}{" "}
-                <span className={style.itemCasesPer1M}>
-                  {" "}
+                {usaCasesPor1M}
+                <span className={style.itemCasesPer1M}> 
                   a cada 1M de pessoas
                 </span>
               </span>
