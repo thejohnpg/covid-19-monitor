@@ -1,13 +1,11 @@
-html {
-  background-color: #35424a;
-}
-
 .container {
+  width: 100vw;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-around;
-  padding: 8px 0 16px 0;
+  padding: 8px 16px;
   margin-bottom: 5vh;
+  box-sizing: border-box;
 }
 
 .wrapper {
@@ -40,17 +38,6 @@ html {
   padding: 8px;
   box-sizing: border-box;
   margin: 8px 0 0;
-  height: 400px;
-  justify-content: space-between;
-}
-
-.cardWorld {
-  min-height: 320px;
-  justify-content: space-between;
-}
-
-.cardWorld li {
-  padding: 16px;
 }
 
 .item {
@@ -93,79 +80,17 @@ html {
   vertical-align: middle;
 }
 
-.lastupdateServer {
-  width: 100%;
-}
-
-.icon {
-  margin-left: 10px;
-}
-
-.iconServer {
-  margin-right: 10px;
-}
-
-.lastupdateServer {
+.titleContainer {
+  width: 100vw;
   padding: 8px;
-  margin-bottom: 5vh;
-  margin-top: 5vh;
   display: flex;
   justify-content: center;
-}
-
-.lastupdateServerText {
-  font-size: 0.6em;
-  color: #9dadcc;
-  display: flex;
   align-items: center;
 }
 
-.infoGoogle {
-  width: 60vw;
-  padding: 16px 32px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-
-}
-
-.containerTitle {
-  margin-top: 5vh;
-  padding: 16px 0;
-}
-
-.titleInfo {
+.titleContainerText {
   font-size: 1.5em;
   font-weight: 700;
   margin: 0 auto;
   text-align: center;
-  padding: 8px 16px;
-}
-
-.descriptionGoogleText{
-  color: #9dadcc;
-  line-height: 25px;
-  letter-spacing: 2px;
-  transition: background-color 250ms, color 250ms;
-}
-
-.descriptionGoogleText:hover{
-  background-color: #5c6577;
-  color: #fff;
-}
-
-.imgCoronaVirus {
-  max-width: 800px;
-  width: 100%;
-}
-
-.containerTitleInfo {
-  width: 100vw;
-  height: 8vh;
-  background: #9dadcc;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding: 8px 0;
 }
