@@ -409,7 +409,7 @@ export default function Container() {
           </ul>
         </div>
 
-        <ParanaCases />
+        {/* <ParanaCases /> */}
 
         {/* last Update Server API */}
         <div className={style.lastupdateServer}>
