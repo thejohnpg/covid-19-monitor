@@ -5,8 +5,6 @@ import moment from "moment";
 
 import style from "./style.module.css";
 
-import ParanaCases from "./../ParanaCases/ParanaCases";
-
 import { GiBrazil, GiWorld } from "react-icons/gi";
 import { GoServer } from "react-icons/go";
 
@@ -408,8 +406,6 @@ export default function Container() {
             </li>
           </ul>
         </div>
-
-        {/* <ParanaCases /> */}
 
         {/* last Update Server API */}
         <div className={style.lastupdateServer}>

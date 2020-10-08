@@ -1,8 +1,7 @@
 
-[![Netlify Status](https://api.netlify.com/api/v1/badges/d867f258-a554-4565-92e8-285cd009dd96/deploy-status)](https://app.netlify.com/sites/covid19-monitorbr/deploys)
 
 # Covid-19 Monitor Br
-> **Demo  https://covid19-monitorbr.netlify.com/**
+> **Demo  https://covid19br-monitor.vercel.app**
 
 This is a simple project using ReactJs to monitor Corona Virus cases in Brazil and in the World.
 
