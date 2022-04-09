@@ -10,7 +10,7 @@
     "classnames": "^2.2.6",
     "dotenv": "^8.2.0",
     "fuse.js": "^5.1.0",
-    "moment": "^2.24.0",
+    "moment": "^2.29.2",
     "react": "^16.13.0",
     "react-adsense": "^0.1.0",
     "react-dom": "^16.13.0",
